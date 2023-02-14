@@ -10,5 +10,29 @@
         totalt.Text = (s1 + s2 + s3 + s4 + s5)
         avgt.Text = totalt.Text / 5
 
+        Dim per As Integer = Convert.ToInt32(avgt.Text)
+        Try
+            Select Case per
+                Case per
+                    If avgt.Text >= 70 Then
+                        MsgBox("Distinction")
+                        Return
+                    ElseIf avgt.Text >= 60 Then
+                        MsgBox("First Class")
+                        Return
+                    ElseIf avgt.Text >= 50 Then
+                        MsgBox("Second Class")
+                        Return
+                    ElseIf avgt.Text >= 40 Then
+                        MsgBox("Pass")
+                        Return
+                    Else
+                        MsgBox("You Are Fail !")
+                        Return
+                    End If
+            End Select
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

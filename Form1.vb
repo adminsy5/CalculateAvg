@@ -10,10 +10,10 @@
         totalt.Text = (s1 + s2 + s3 + s4 + s5)
         avgt.Text = totalt.Text / 5
 
-        Dim per As Integer = Convert.ToInt32(avgt.Text)
+        ' Dim per As Integer = Convert.ToInt32(avgt.Text)
         Try
-            Select Case per
-                Case per
+            Select Case avgt.Text
+                Case avgt.Text
                     If avgt.Text >= 70 Then
                         MsgBox("Distinction")
                         Return
